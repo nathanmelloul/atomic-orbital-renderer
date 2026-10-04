@@ -1,4 +1,4 @@
-# atomic-orbital-renderer
+# Atomic Orbital Renderer
 Renders beautiful looking atomic orbitals using the Schrodinger Wave Function.
 
 <img style="width: 500;" src="images/orbitalPreview1.png"><img/>
