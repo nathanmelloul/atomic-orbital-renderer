@@ -8,17 +8,20 @@ For the quickest setup, use the <Viewer/> component from Viewer.tsx
 Here is an example:
 
 import { Viewer } from "./Viewer";
-%<html>
-%  <body>
-%    <Viewer/>
-%%  </body>
-%</html>
+```html
+<html>
+  <body>
+    <Viewer/>
+  </body>
+</html>
+```
 
 For custom pages, use the <Schrodinger/> component from Schrodinger.tsx.
 Here is an example:
-
+```html
 <Schrodinger
   layers={currentLayers}
   version={version}
   visualScale={visualScale}
   renderMode={renderMode} />
+```
