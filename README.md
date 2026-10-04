@@ -1,9 +1,7 @@
-### Atomic Orbital Renderer
+# Atomic Orbital Renderer
 Renders beautiful looking atomic orbitals using the Schrodinger Wave Function.
 
 <img src="images/orbitalPreview_31.png"><img/>
-<img src="images/orbitalPreview_27.png"><img/>
-<img src="images/orbitalPreview_15.png"><img/>
 
 The first step is generating the layers. We add S, P, D, and F orbitals in order, until we run out of electrons.
 
@@ -29,3 +27,9 @@ Here is an example:
   visualScale={visualScale}
   renderMode={renderMode} />
 ```
+
+# Gallery
+<img src="images/orbitalPreview_15.png"><img/>
+<img src="images/orbitalPreview_26.png"><img/>
+<img src="images/orbitalPreview_30.png"><img/>
+<img src="images/orbitalPreview_27.png"><img/>
