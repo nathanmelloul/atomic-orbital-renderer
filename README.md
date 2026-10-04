@@ -8,17 +8,16 @@ Before explaining the renderer, I'll explain the math:
 
 Wave Function: Comprised of a Radial component (magnitude) and Angular component (direction).
 
-Zeff: Calculated for each shell. Represents how heavily shielded the nucleus is by other electrons. 
-Gives highly accurate results compared to simply using Z number. Essential for rendering larger atoms.
+Zeff: Calculated for each shell. Represents how heavily shielded the nucleus is by other electrons. Gives highly accurate results compared to simply using Z number. Essential for rendering larger atoms.
 
-Radial component: Takes n, l, Z, and r as inputs. Uses Laguirre polynomials along with some clever math to get magnitude.
+Radial component: Takes n, l, Z, and r as inputs. Uses Laguirre polynomials to get magnitude. Distance from nucleus.
 ```typescript
 function radialWF(n: number, l: number, Z: number, r: number): number {
     const rho = (2 * Z * r) / n;
     return Math.exp(-rho / 2) * Math.pow(rho, l) * assocLaguerre(n - l - 1, 2 * l + 1, rho);
 }
 ```
-Angular component: Takes l, m, cosine, sine, and phi (azimuthal angle) as inputs. Uses Legendre polynomials along with math to get direciton.
+Angular component: Takes l, m, cosine, sine, and phi (azimuthal angle) as inputs. Uses Legendre polynomials along with some clever to get direction. Models the shape of the orbital.
 ```typescript
 function realSH(l: number, m: number, cosT: number, sinT: number, phi: number): number {
     const absM = Math.abs(m);
@@ -54,8 +53,7 @@ Using random spherical sampling instead of an n^3 grid of cartesian coordinates 
 Instead of plotted points being equally spread out, the density increases near the nucleus and decreases outward. Beautiful.
 Using an n^3 approach was my first instinct as a CS student, but it was the wrong tool for the job.
 
-To those asking: Did you really learn quantum mechanics for this project? The answer is just a little.
-I'm not super knowledgable about quantum mechanics (yet). However I plot equations, and this was an excellent challenge.
+To those asking: Did you really learn quantum mechanics for this project? The answer is just a little. I'm not super knowledgable about quantum mechanics (yet). However I plot equations, and this was an excellent challenge.
 
 ## Setup
 For the quickest setup, use the <Viewer/> component from Viewer.tsx
