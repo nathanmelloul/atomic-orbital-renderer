@@ -61,6 +61,9 @@ Using random spherical sampling instead of an n^3 grid of cartesian coordinates 
 Instead of plotted points being equally spread out, the density increases near the nucleus and decreases outward. Beautiful.
 Using an n^3 approach was my first instinct as a CS student, but it was the wrong tool for the job.
 
+**Before and after:**
+<img src="images/before_and_after.png"><img/>
+
 To those asking: Did you really learn quantum mechanics for this project? The answer is just a little. I'm not super knowledgable about quantum mechanics (yet). As someone who plots equations however, this was an excellent challenge.
 
 ## Setup
