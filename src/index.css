@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+
+@theme 
+{
+  --color-dark-blue: #011F26;
+  --color-medium-blue: #025E73;
+  --color-light-blue: #026873;
+  --color-teal: #03A688;
+  --color-hotpink: #F2668B;
+  --color-foreground: #ffffff;
+  --color-lilac: #d4b8ff;
+
+  --font-rubik: Rubik Dirt, "sans-serif";
+  --font-playfair: Playfair Display, "sans-serif";
+}
+
+@layer base
+{
+   html {
+    scroll-behavior: smooth;
+
+  }
+
+  body {
+    background-color: var(--color-black);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+}
